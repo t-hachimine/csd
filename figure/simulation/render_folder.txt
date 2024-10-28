@@ -1,0 +1,20 @@
+model_a
+random	:3
+geom	:2
+RL	:rl_debug_7
+oracle	:5
+
+model_d
+random	:5
+geom	:4
+RL	:31
+oracle	:1
+
+
+model_e
+random	:2
+geom	:3
+RL	:31
+oracle	:5
+
+
