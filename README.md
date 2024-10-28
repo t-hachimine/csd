@@ -1,4 +1,4 @@
-# Learning to Shape by Grinding:<br>Cutting-surface-aware Model-based Reinforcement Learning
+# Cutting Sequence Diffuser:<br> Sim-to-Real Transferable Planning for Object Shaping by Grinding
 ## Our project page : https://t-hachimine.github.io/csd/
 
 <!-- ## Paper : https://arxiv.org/abs/2308.02150 -->
