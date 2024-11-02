@@ -2,7 +2,7 @@
 <html lang="en-us" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <title>CSA-MBRL</title>
+  <title>CSD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
   <link rel="stylesheet" href="css/normalize.css">
@@ -83,6 +83,18 @@
   <!-- ****************** Proposed method ****************** -->
   <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
+            class="octicon octicon-link"></span></a>Framework of Cutting Sequence Diffuser</h1>
+            A diffusion model is trained by collected data under grinding action with a small removal volume.
+            At the deployment, planned M-step action (cutting) sequences are executed based on the current observed shape.
+  <h2>
+  <div class="center_man">
+    <figure>
+      <img src="figure/block_diagram_v4.png" alt="net arch." class="csam_img">
+    </figure>
+  </div>
+
+  <h1>
+    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Action space for grinding with a small removal volume</h1>
             Top: Shape transition by cutting surface. Bottom: Transition examples of cutting surface.
   <h2>
@@ -92,19 +104,6 @@
       <img src="figure/cutting_surface_move.png" alt="Overview" class="csam_img">
     </figure>
   </div>
-
-  <h1>
-    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Framework of Cutting Sequence Diffuser</h1>
-            A diffusion model is trained by collected data under grinding action with a small removal volume.
-            At the deployment, planned M-step action (cutting) sequences are executed based on the current observed shape.
-  <h2>
-  <div class="center_man">
-    <figure>
-      <img src="figure/block_diagram_v4.png" alt="net arch." class="csambrl_img">
-    </figure>
-  </div>
-
 
   <!-- ****************** Simulation ****************** -->
   <h1>
@@ -118,46 +117,36 @@
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-      class="octicon octicon-link"></span></a> Object A </h2>
+      class="octicon octicon-link"></span></a> Shape A printed with ASA material</h2>
 
       <div class="sim_yoko">
         <figure>
-          <figcaption><h5>Random</h5></figcaption>
+          <figcaption><h5>Const-RS</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_random/02_a_rand_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_random/04_a_rand_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/constrs/soft_env_v2_model_a/02_front_.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/constrs/soft_env_v2_model_a/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
               <!-- <img src="figure/simulation/model_a_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Geometric</h5></figcaption>
+          <figcaption><h5>CSA-MBRL</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_geom/02_a_geom_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_geom/04_a_geom_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csa_mbrl/model_a_soft/02_eye_catch_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csa_mbrl/model_a_soft/04_eye_catch_isometric.gif" alt="" style="vertical-align: middle;">
               <!-- <img src="figure/simulation/model_a_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Proposed</h5></figcaption>
+          <figcaption><h5>CSD (Ours)</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_rl/02_a_rl_front.gif"  alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_rl/04_a_rl_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csd/model_a_soft/02_front_.gif"  alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csd/model_a_soft/02_front_.gif" alt="" style="vertical-align: middle;">
               <!-- <img src="figure/simulation/model_a_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
-            </div>
-          </figure>
-        </figure>
-        <figure>
-          <figcaption><h5>Proposed-GT</h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/simulation/model_a_oracle/02_a_oracle_front.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_oracle/04_a_oracle_isometric.gif"   alt="" style="vertical-align: middle;">
-              <!-- <img src="figure/simulation/model_a_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;"> -->
             </div>
           </figure>
         </figure>
@@ -165,53 +154,43 @@
 
     <div class="center_man">
       <figure>
-        <img src="figure/simulation/sim_model_a_graph.png" alt="net arch." class="csam_img">
+        <img src="figure/simulation/sim_shape_A_with_asa_table.png" alt="net arch." class="csam_img">
       </figure>
     </div>
 
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-      class="octicon octicon-link"></span></a> Object B </h2>
+      class="octicon octicon-link"></span></a> Shape A printed with PC material </h2>
 
       <div class="sim_yoko">
         <figure>
-          <figcaption><h5>Random</h5></figcaption>
+          <figcaption><h5>Const-RS</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_random/02_d_rand_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_random/04_d_rand_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/constrs/hard_env_v2_model_a/02_front_.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/constrs/hard_env_v2_model_a/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
               <!-- <img src="figure/simulation/model_d_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Geometric</h5></figcaption>
+          <figcaption><h5>CSA-MBRL</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_geom/02_d_geom_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_geom/04_d_geom_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csa_mbrl/model_a_hard/02_eye_catch_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csa_mbrl/model_a_hard/04_eye_catch_isometric.gif" alt="" style="vertical-align: middle;">
               <!-- <img src="figure/simulation/model_d_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Proposed</h5></figcaption>
+          <figcaption><h5>CSD (Ours)</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_rl/02_d_rl_front.gif"  alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_rl/04_d_rl_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csd/model_a_hard/02_front_.gif"  alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/csd/model_a_hard/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
               <!-- <img src="figure/simulation/model_d_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
-            </div>
-          </figure>
-        </figure>
-        <figure>
-          <figcaption><h5>Proposed-GT</h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/simulation/model_d_oracle/02_d_oracle_front.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_oracle/04_d_oracle_isometric.gif"   alt="" style="vertical-align: middle;">
-              <!-- <img src="figure/simulation/model_d_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;"> -->
             </div>
           </figure>
         </figure>
@@ -219,7 +198,7 @@
 
       <div class="center_man">
         <figure>
-          <img src="figure/simulation/sim_model_d_graph.png" alt="net arch." class="csam_img">
+          <img src="figure/simulation/sim_shape_A_with_pc_table.png" alt="net arch." class="csam_img">
         </figure>
       </div>
 
@@ -227,46 +206,36 @@
 
       <h2>
         <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-          class="octicon octicon-link"></span></a> Object C </h2>
+          class="octicon octicon-link"></span></a> Shape B printed with ASA material </h2>
     
           <div class="sim_yoko">
             <figure>
-              <figcaption><h5>Random</h5></figcaption>
+              <figcaption><h5>Const-RS</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_random/02_e_rand_front.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_random/04_e_rand_isometric.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/constrs/soft_env_v2_model_a_3_180/02_front_.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/constrs/soft_env_v2_model_a_3_180/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
                   <!-- <img src="figure/simulation/model_e_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
                 </div>
             </figure>
             </figure>
             <figure>
-              <figcaption><h5>Geometric</h5></figcaption>
+              <figcaption><h5>CSA-MBRL</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_geom/02_e_geom_front.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_geom/04_e_geom_isometric.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/csa_mbrl/model_a_3_18/02_eye_catch_front.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/csa_mbrl/model_a_3_18/04_eye_catch_isometric.gif" alt="" style="vertical-align: middle;">
                   <!-- <img src="figure/simulation/model_e_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
                 </div>
             </figure>
             </figure>
             <figure>
-              <figcaption><h5>Proposed</h5></figcaption>
+              <figcaption><h5>CSD (Ours)</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_rl/02_e_rl_front.gif"  alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_rl/04_e_rl_isometric.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/csd/planning_v2_1/02_front_.gif"  alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/csd/planning_v2_1/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
                   <!-- <img src="figure/simulation/model_e_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
-                </div>
-              </figure>
-            </figure>
-            <figure>
-              <figcaption><h5>Proposed-GT</h5></figcaption>
-              <figure>
-                <div class="tate">
-                  <img src="figure/simulation/model_e_oracle/02_e_oracle_front.gif"   alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_oracle/04_e_oracle_isometric.gif" alt="" style="vertical-align: middle;">
-                  <!-- <img src="figure/simulation/model_e_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;"> -->
                 </div>
               </figure>
             </figure>
@@ -274,48 +243,103 @@
 
           <div class="center_man">
             <figure>
-              <img src="figure/simulation/sim_model_e_graph.png" alt="net arch." class="csam_img">
+              <img src="figure/simulation/sim_shape_B_with_asa_table.png" alt="net arch." class="csam_img">
             </figure>
           </div>
+
+          <h2>
+            <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
+              class="octicon octicon-link"></span></a> Shape C printed with ASA material </h2>
+        
+              <div class="sim_yoko">
+                <figure>
+                  <figcaption><h5>Const-RS</h5></figcaption>
+                  <figure>
+                    <div class="tate">
+                      <img src="figure/simulation/constrs/soft_env_v2_model_a_270_100/02_front_.gif" alt="" style="vertical-align: middle;">
+                      <img src="figure/simulation/constrs/soft_env_v2_model_a_270_100/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
+                      <!-- <img src="figure/simulation/model_e_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
+                    </div>
+                </figure>
+                </figure>
+                <figure>
+                  <figcaption><h5>CSA-MBRL</h5></figcaption>
+                  <figure>
+                    <div class="tate">
+                      <img src="figure/simulation/csa_mbrl/model_a_timestep_270_100/02_eye_catch_front.gif" alt="" style="vertical-align: middle;">
+                      <img src="figure/simulation/csa_mbrl/model_a_timestep_270_100/04_eye_catch_isometric.gif" alt="" style="vertical-align: middle;">
+                      <!-- <img src="figure/simulation/model_e_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
+                    </div>
+                </figure>
+                </figure>
+                <figure>
+                  <figcaption><h5>CSD (Ours)</h5></figcaption>
+                  <figure>
+                    <div class="tate">
+                      <img src="figure/simulation/csd/planning_v1/02_front_.gif"  alt="" style="vertical-align: middle;">
+                      <img src="figure/simulation/csd/planning_v1/04_isometric_2_.gif" alt="" style="vertical-align: middle;">
+                      <!-- <img src="figure/simulation/model_e_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
+                    </div>
+                  </figure>
+                </figure>
+              </div>
+              <div class="center_man">
+                <figure>
+                  <img src="figure/simulation/sim_shape_C_with_asa_table.png" alt="net arch." class="csam_img">
+                </figure>
+              </div>
+
+
+
 
   <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Real Robot Experiments</h1>
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object A</Object></h2>
+            class="octicon octicon-link"></span></a>Object A printed with ASA material</Object></h2>
   <div class="center_man">
     <figure>
-      <img src="figure/real/model_a_result.png" alt="cat" class="task_ablation_img">
+      <img src="figure/real/real_shape_A_asa.png" alt="cat" class="task_ablation_img">
     </figure>
   </div>
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object B</Object></h2>
+            class="octicon octicon-link"></span></a>Object A printed with PC material</Object></h2>
   <div class="center_man">
     <figure>
-      <img src="figure/real/model_b_result.png" alt="cat" class="task_ablation_img">
+      <img src="figure/real/real_shape_A_pc.png" alt="cat" class="task_ablation_img">
     </figure>
   </div>
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object C</Object></h2>
+            class="octicon octicon-link"></span></a>Object B printed with ASA material</Object></h2>
   <div class="center_man">
     <figure>
-      <img src="figure/real/model_c_result.png" alt="cat" class="task_ablation_img">
+      <img src="figure/real/real_shape_B_asa.png" alt="cat" class="task_ablation_img">
     </figure>
   </div>
 
-  <h1>
+
+  <h2>
+    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
+            class="octicon octicon-link"></span></a>Object C printed with ASA material</Object></h2>
+  <div class="center_man">
+    <figure>
+      <img src="figure/real/real_shape_C_asa.png" alt="cat" class="task_ablation_img">
+    </figure>
+  </div>
+
+  <!-- <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Parameters</h1>
   <div class="center_man">
     <figure>
       <img src="figure/hyper_param.png" alt="cat" class="task_ablation_img">
     </figure>
-  </div>
+  </div> -->
 
   <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
