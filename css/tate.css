@@ -1,8 +1,8 @@
 .tate {
   /* display: flex; */
   max-width: 200px;
-  margin-top: 1vw;
-  margin-bottom: 2vw;
+  margin-top: -1vw;
+  margin-bottom: -1vw;
   text-align    : center;
   font-weight   : bold;
   /* object-fit:  contain; */
@@ -37,7 +37,7 @@
 @media screen and (max-width: 1200px) {
   .tate figure {
     margin: 0 auto;
-    height: 20%;
+    height: 10%;
     /* width: 30%; */
     vertical-align: middle;
   }

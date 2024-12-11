@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="css/real_yoko2.css">
   <link rel="stylesheet" href="css/tate.css">
   <link rel="stylesheet" href="css/figures.css">
-
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 </head>
 <body>
 <section class="page-header">
@@ -110,7 +112,30 @@
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Simulation Experiments</h1>
 
-  <!-- ====================  Valve Rotation ==================== -->
+  <!-- ====================  Cost weights in sim ==================== -->
+  <h2>
+    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
+      class="octicon octicon-link"></span></a> Cost weights of CSD in simulation experiments</h2>
+      <div class="center_man">
+        <figure>
+          <img src="figure/simulation/cost_weights_simulation.png" alt="net arch." class="task_ablation_img">
+        </figure>
+      </div>
+
+  <h2>
+    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
+      class="octicon octicon-link"></span></a> Effects of individuals cost for shape A with ASA</h2>
+      <p>それぞれのコストを消去することにより，対応する評価指標が悪化することを確認した．
+        \(c_\mathrm{col}\)は拡散モデルで予測した行動\(\mathbf{a}_l\)と状態\(\mathbf{s}_l\)を用いて計算される．
+        よって，\(c_\mathrm{state}\)を取り除いた場合，\(\mathbf{s}_l\)の予測性能が悪化し\(c_\mathrm{col}\)を正しく計算することが難しくなるため，
+        cut volume cost が CSD w/o \(c_\mathrm{col}\)と同等の値を取ったと考えられる．
+        これらを踏まえ，多項なコストの重みを自動的に調整できる手法へ拡張することは，興味深いfuture workだと考えている．</p>
+      <div class="center_man">
+        <figure>
+          <img src="figure/simulation/cost_ablation_shape_a_asa.png" alt="net arch." class="csam_img">
+        </figure>
+      </div>
+
   <!-- <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Valve Rotation Task</h2> -->
@@ -250,7 +275,7 @@
           <h2>
             <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
               class="octicon octicon-link"></span></a> Shape C printed with ASA material </h2>
-        
+
               <div class="sim_yoko">
                 <figure>
                   <figcaption><h5>Const-RS</h5></figcaption>
@@ -295,9 +320,20 @@
   <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Real Robot Experiments</h1>
+
+  <!-- ====================  Cost weights in real ==================== -->
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object A printed with ASA material</Object></h2>
+      class="octicon octicon-link"></span></a> Cost weights of CSD in real robot experiments</h2>
+      <div class="center_man">
+        <figure>
+          <img src="figure/real/cost_weights_real.png" alt="net arch." class="task_ablation_img">
+        </figure>
+      </div>
+
+  <h2>
+    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
+            class="octicon octicon-link"></span></a>Shape A printed with ASA material</Object></h2>
   <div class="center_man">
     <figure>
       <img src="figure/real/real_shape_A_asa.png" alt="cat" class="task_ablation_img">
@@ -306,7 +342,7 @@
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object A printed with PC material</Object></h2>
+            class="octicon octicon-link"></span></a>Shape A printed with PC material</Object></h2>
   <div class="center_man">
     <figure>
       <img src="figure/real/real_shape_A_pc.png" alt="cat" class="task_ablation_img">
@@ -315,7 +351,7 @@
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object B printed with ASA material</Object></h2>
+            class="octicon octicon-link"></span></a>Shape B printed with ASA material</Object></h2>
   <div class="center_man">
     <figure>
       <img src="figure/real/real_shape_B_asa.png" alt="cat" class="task_ablation_img">
@@ -325,7 +361,7 @@
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Object C printed with ASA material</Object></h2>
+            class="octicon octicon-link"></span></a>Shape C printed with ASA material</Object></h2>
   <div class="center_man">
     <figure>
       <img src="figure/real/real_shape_C_asa.png" alt="cat" class="task_ablation_img">
