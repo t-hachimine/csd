@@ -116,6 +116,14 @@
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
       class="octicon octicon-link"></span></a> Cost weights of CSD in simulation experiments</h2>
+      <p>
+        <!-- \(c_\mathrm{state}\)はJanner <i>et al.</i><sup>1</sup>と同様にdenoising step中に直接置き換えることで実装されるため，\(\lambda_\mathrm{state}\)の調整は不要（考慮しなくて良い）． -->
+        \(c_\mathrm{state}\) is implemented by directly replacing in the denoising processes, as in Janner <i>et al.</i><sup><small>1</small></sup>. Therefore, adjusting the \(\lambda_\mathrm{state}\) is unnecessary.
+        <br>
+        <small><small>1: M. Janner, Y. Du, J. Tenenbaum, and S. Levine, “Planning with diffusion
+          for flexible behavior synthesis,” in Int. Conf. on Machine Learning, vol.
+          162, 2022, pp. 9902–9915.</small></small>
+      </p>
       <div class="center_man">
         <figure>
           <img src="figure/simulation/cost_weights_simulation.png" alt="net arch." class="task_ablation_img">
@@ -125,11 +133,10 @@
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
       class="octicon octicon-link"></span></a> Effects of individuals cost for shape A with ASA</h2>
-      <p>それぞれのコストを消去することにより，対応する評価指標が悪化することを確認した．
-        \(c_\mathrm{col}\)は拡散モデルで予測した行動\(\mathbf{a}_l\)と状態\(\mathbf{s}_l\)を用いて計算される．
-        よって，\(c_\mathrm{state}\)を取り除いた場合，\(\mathbf{s}_l\)の予測性能が悪化し\(c_\mathrm{col}\)を正しく計算することが難しくなるため，
-        cut volume cost が CSD w/o \(c_\mathrm{col}\)と同等の値を取ったと考えられる．
-        これらを踏まえ，多項なコストの重みを自動的に調整できる手法へ拡張することは，興味深いfuture workだと考えている．</p>
+      <p>We have conducted ablation studies to demonstrate how the performance changes when individual costs are removed.
+        From  the following table, we confirmed that removing each cost led to a deterioration in the corresponding evaluation metric. \(c_\mathrm{vol}\) is calculated using the predicted action \(\mathbf{a}_l\) and state \(\mathbf{s}_l\) by the diffusion model. Therefore, if \(c_\mathrm{state}\) is removed, the prediction performance of \(\mathbf{s}_l\) deteriorates, making it difficult to compute \(c_\mathrm{vol}\) accurately. 
+        As a result, it can be considered that the cut volume cost was comparable to CSD without \(c_\mathrm{vol}\).
+      </p>
       <div class="center_man">
         <figure>
           <img src="figure/simulation/cost_ablation_shape_a_asa.png" alt="net arch." class="csam_img">
