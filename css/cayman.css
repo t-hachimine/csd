@@ -403,13 +403,18 @@ a {
   height: auto;  /* 高さは自動指定 */
 }
 
+.real_table_img {
+  width : 89%;    /* 横幅を割合で指定 */
+  height: auto;  /* 高さは自動指定 */
+}
+
 .csambrl_img {
-  width: 80%;    /* 横幅を割合で指定 */
+  width: 90%;    /* 横幅を割合で指定 */
   height: auto;  /* 高さは自動指定 */
 }
 
 .task_ablation_img {
-  width: 80vw;    /* 横幅を割合で指定 */
+  width: 90vw;    /* 横幅を割合で指定 */
   height: auto;  /* 高さは自動指定 */
 }
 
